@@ -1,1 +1,16 @@
-@include Grid(12, 10px)
+.container
+  width: 960px
+  margin: 0 auto
+  &:before
+    display: table
+    content: " "
+
+.row
+  margin-right: -15px
+  margin-left: -15px
+  &:before
+    display: table
+    content: " "
+
+
+@include Grid(12, 15px)

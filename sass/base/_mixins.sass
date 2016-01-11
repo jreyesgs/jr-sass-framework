@@ -1,11 +1,14 @@
 .position
   position: relative
   float: left
+  display: inline-block
+$p: "%"
 @mixin Grid($col: 12, $padding: 1em)
   $wcol: 100/$col
   @for $n from 1 through $col
     .col-md-#{$n}
-      width: $wcol*$n+"%"
+      width: $wcol*$n+0%
       padding-left: $padding
       padding-right: $padding
+      min-height: 1px
       @extend .position
