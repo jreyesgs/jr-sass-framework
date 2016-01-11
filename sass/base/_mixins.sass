@@ -1,0 +1,5 @@
+@mixin Grid($col: 12)
+  $wcol: 100/$col
+  @for $n from 1 through $col
+    .col-md-#{$n}
+      width: $wcol*$n+"%"
