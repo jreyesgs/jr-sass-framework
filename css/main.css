@@ -1,7 +1,8 @@
 .position, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  position: relative;
   float: left;
-  display: inline-block;
+  display: inline;
+  position: relative;
+  min-height: 1px;
 }
 
 * {
@@ -16,104 +17,160 @@
   box-sizing: border-box;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
 .container {
+  position: relative;
   width: 960px;
   margin: 0 auto;
+  border: 1px solid green;
 }
-.container:before {
-  display: table;
-  content: " ";
+
+.container-fuid {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid blue;
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  position: relative;
+  border: 1px solid red;
 }
-.row:before {
-  display: table;
+
+.row::before, .row::after {
   content: " ";
+  display: table;
+  clear: both;
 }
 
 .col-md-1 {
   width: 8.33333%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-2 {
   width: 16.66667%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-3 {
   width: 25%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-4 {
   width: 33.33333%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-5 {
   width: 41.66667%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-6 {
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-7 {
   width: 58.33333%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-8 {
   width: 66.66667%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-9 {
   width: 75%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-10 {
   width: 83.33333%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-11 {
   width: 91.66667%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
 }
 
 .col-md-12 {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 1px;
+  border: 1px solid #ccc;
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mt30 {
+  margin-top: 30px !important;
+}
+
+.mt40 {
+  margin-top: 40px !important;
+}
+
+.mt50 {
+  margin-top: 50px !important;
+}
+
+.mt60 {
+  margin-top: 60px !important;
+}
+
+.mt70 {
+  margin-top: 70px !important;
+}
+
+.mt80 {
+  margin-top: 80px !important;
+}
+
+.mt90 {
+  margin-top: 90px !important;
+}
+
+.mt100 {
+  margin-top: 100px !important;
 }

@@ -1,16 +1,22 @@
 .container
+  position: relative
   width: 960px
   margin: 0 auto
-  &:before
-    display: table
-    content: " "
+  border: 1px solid green
+
+.container-fuid
+  position: relative
+  width: 100%
+  margin: 0 auto
+  border: 1px solid blue
 
 .row
-  margin-right: -15px
-  margin-left: -15px
-  &:before
-    display: table
-    content: " "
+  position: relative
+  border: 1px solid red
 
+.row::before, .row::after
+  content: " "
+  display: table
+  clear: both
 
 @include Grid(12, 15px)

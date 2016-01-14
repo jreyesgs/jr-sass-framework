@@ -1,8 +1,9 @@
 .position
-  position: relative
   float: left
-  display: inline-block
-$p: "%"
+  display: inline
+  position: relative
+  min-height: 1px
+
 @mixin Grid($col: 12, $padding: 1em)
   $wcol: 100/$col
   @for $n from 1 through $col
@@ -10,5 +11,10 @@ $p: "%"
       width: $wcol*$n+0%
       padding-left: $padding
       padding-right: $padding
-      min-height: 1px
       @extend .position
+      border: 1px solid #ccc
+
+@mixin MarginTop()
+  @for $v from 1 through 10
+    .mt#{$v*10}
+      margin-top: #{$v*10}px!important
