@@ -14,10 +14,10 @@
       @extend .position
       border: 1px solid #ccc
 
-@mixin MarginTop()
-  @for $v from 1 through 10
-    .mt#{$v*10}
-      margin-top: #{$v*10}px!important
+@mixin MarginTop($size)
+  @for $v from 1 through 4
+    .mt-#{$size}-#{$v*10}
+      margin-top: #{$v*10}px
 
 
 // @mixin Align()
