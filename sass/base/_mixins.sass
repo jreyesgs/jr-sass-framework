@@ -18,3 +18,18 @@
   @for $v from 1 through 10
     .mt#{$v*10}
       margin-top: #{$v*10}px!important
+
+
+// @mixin Align()
+//   $refcolors: 'xs','sm','md','lg'
+//   @each $c in $refcolors
+//     text-#{$c}-right
+//       text-align: right
+
+@mixin Align($size)
+  .text-#{$size}-right
+    text-align: right
+  .text-#{$size}-center
+    text-align: center
+  .text-#{$size}-left
+    text-align: left
