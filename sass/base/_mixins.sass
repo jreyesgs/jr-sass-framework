@@ -1,30 +1,13 @@
-.position
-  float: left
-  display: inline
-  position: relative
-  min-height: 1px
-
-@mixin Grid($col: 12, $padding: 1em)
-  $wcol: 100/$col
-  @for $n from 1 through $col
-    .col-md-#{$n}
-      width: $wcol*$n+0%
-      padding-left: $padding
-      padding-right: $padding
-      @extend .position
-      border: 1px solid #ccc
-
 @mixin MarginTop($size)
   @for $v from 1 through 4
     .mt-#{$size}-#{$v*10}
       margin-top: #{$v*10}px
 
-
-// @mixin Align()
-//   $refcolors: 'xs','sm','md','lg'
-//   @each $c in $refcolors
-//     text-#{$c}-right
-//       text-align: right
+@mixin Pull($size)
+  .pull-#{$size}-left
+    float: left!important
+  .pull-#{$size}-right
+    float: right!important
 
 @mixin Align($size)
   .text-#{$size}-right
