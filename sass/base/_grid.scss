@@ -1,0 +1,95 @@
+.debug{
+  // Debug mode
+  border: 1px solid #000;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+.container{
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row{
+  width: 100%;
+}
+
+.row::before, .row::after{
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+[class^="col-"]{
+  display: block;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  @extend .debug;
+}
+
+@for $i from 1 through $gridColums {
+  .col-sm-#{$i} { width: $widthColum * $i * 1%; }
+}
+
+@for $i from 1 through 10 {
+  .col-sm-x#{$i*10} { width: $i * 10%; }
+}
+
+@media print, screen and (min-width: 40em){
+  @for $i from 1 through $gridColums {
+    .col-md-#{$i} { width: $widthColum * $i * 1%; }
+  }
+  @for $i from 1 through 10 {
+    .col-md-x#{$i*10} { width: $i * 10%; }
+  }
+}
+
+@media print, screen and (min-width: 64em){
+  @for $i from 1 through $gridColums {
+    .col-lg-#{$i} { width: $widthColum * $i * 1%; }
+  }
+  @for $i from 1 through 10 {
+    .col-lg-x#{$i*10} { width: $i * 10%; }
+  }
+}
+
+/* FLEX GRID */
+
+.row-flex{
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // margin-right: -.5rem;
+  // margin-left: -.5rem;
+  @extend .debug;
+
+  @for $i from 1 through $gridColums {
+    & > .col-sm-#{$i} {
+      flex-basis: $widthColum * $i * 1%;
+      max-width: $widthColum * $i * 1%;
+    }
+  }
+}
+
+@media print, screen and (min-width: 40em){
+  .row-flex{
+    @for $i from 1 through $gridColums {
+      & > .col-md-#{$i} {
+        flex-basis: $widthColum * $i * 1%;
+        max-width: $widthColum * $i * 1%;
+      }
+    }
+  }
+}
+
+@media print, screen and (min-width: 64em){
+  .row-flex{
+    @for $i from 1 through $gridColums {
+      & > .col-lg-#{$i} {
+        flex-basis: $widthColum * $i * 1%;
+        max-width: $widthColum * $i * 1%;
+      }
+    }
+  }
+}
