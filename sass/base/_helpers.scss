@@ -18,3 +18,51 @@
   @include  MarginTop('lg');
   @include Pull('lg');
 }
+
+.m10{
+  margin-top: 10px!important;
+}
+.m20{
+  margin-top: 20px!important;
+}
+.m30{
+  margin-top: 30px!important;
+}
+.m40{
+  margin-top: 40px!important;
+}
+.m60{
+  margin-top: 60px!important;
+}
+.small{
+  font-size: 0.8em!important;
+  padding-bottom: 0.5em!important;
+}
+.m-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-center{
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.u-pa{
+  position: absolute!important;
+}
+.u-pr{
+  position: relative!important;
+}
+.center{
+  text-align: center!important;
+}
+.z-100{
+  z-index: 100;
+}
+.z-1000{
+  z-index: 1000;
+}
+.text-left{
+  text-align: left;
+}
