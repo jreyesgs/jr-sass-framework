@@ -41,17 +41,13 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   background:transparent;
 }
 
-*{
-    &,
-    &::before,
-    &::after{
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-        -ms-box-sizing:border-box;
-         -o-box-sizing:border-box;
-            box-sizing:border-box;
-    }
-}
+// *{
+//     &,
+//     &::before,
+//     &::after{
+//       box-sizing:border-box;
+//     }
+// }
 
 /**
  * Correct `block` display not defined in IE 8/9.
@@ -261,8 +257,6 @@ html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"],
 input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border: none;
     cursor: pointer; /* 2 */
@@ -286,8 +280,6 @@ html input[disabled] {
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration,
 input[type="search"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
 }
 
